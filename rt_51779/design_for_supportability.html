@@ -1,32 +1,67 @@
+<h1 id="body-of-the-talk">Body of the talk</h1>
+<h2 id="intro-why-is-designing-for-support-important">Intro: Why is designing for support important?</h2>
+<h3 id="support-is-a-human-avtivity-and-is-limted-by-human-capacity">Support is a human avtivity, and is limted by human capacity</h3>
+<ul>
+<li><p>Hi, My name is Barton Chittenden, I'm from Bywater Solutions. I am, among other things, one of the people that our partners reach when they call in to our support line. I'd like to talk about Koha from the perspective of someone who does technical support, and show how that fits in with the design of Koha.</p></li>
+<li><p>So, before we go any further, I would like you to think about your last experience with a tech support phone call.</p></li>
+</ul>
+<p>By a show of hands, how many of you are</p>
+<ul>
+<li>picturing pressing phone buttons in an IVR system?</li>
+<li>had a long wait on hold</li>
+<li>got someone on the other end of the line who was reading of a script that included the words &quot;I'm sorry you're having trouble with your _____...&quot;</li>
+</ul>
+<p>Were you happy with your experience? Did the person on the other end of the line listen to you? Did you <em>really</em> believe them when they said they were sorry?</p>
+<p>The underlying problem is that when you call into an enormous phone center, you're going to be talking to someone who is taking 150 calls a day, and who has been turned into a robot dealing with the same problems over and over again.</p>
+<p>This isn't a good experience for anyone involved. One of the reasons for this is that...</p>
+<p>&quot;A computer lets you make more mistakes faster than any other invention with the possible exceptions of handguns and Tequila.&quot; -- Mitch Ratcliffe</p>
+<ul>
+<li><p>In a previous life, I did support for a VoIP product, a lot like Vonage. We had a feature that we rushed into production. This fix didn't get adequately tested at scale, and it ended up crashing the entire phone network every 20 seconds. It took operations 3 days to figure this out. Those were the three longest days of my life in tech support. It sucked my compassion dry.</p></li>
+<li><p>Koha isn't structured like this -- it's not deployed in a monolithic environment; it tends to be installed on a network of much smaller servers. However, one or more bad bugs in a major release <em>can</em> create a slow motion version of this, where support staff is not overwhelmed in a single day, but worn down over a period of time. The effects on our compassion, our ability to listen and communicate effectively are diminished, and that's bad for everyone.</p></li>
+<li><p>This talk is aimed at looking at some of the design decisions that would make Koha a little easier to support, either for a systems librarian at a site which has their own Koha instance, or for a support vendor.</p></li>
+</ul>
+<hr />
 <p>Life cycle of a support issue</p>
 <ul>
 <li>Something happens that the user perceives as wrong.</li>
 <li>User calls support, describes issue</li>
 <li>Support person works to
 <ul>
-<li>narrow the description, find out what is or is not relevant</li>
 <li>rephrase the issue in language that everyone can agree on</li>
-<li>replicate the issue</li>
-<li>Triage:
+<li>narrow the description, find out what is or is not relevant</li>
+<li>replicate the issue
 <ul>
-<li>is this a education / configuration issue? Send to Education department.</li>
-<li>is this a data issue? =&gt; Send to data department.</li>
-<li>is this a bug? =&gt; File bug.</li>
+<li>This helps reenforce communication -- if we're seeing the same responses from the system, we're largely in sync.</li>
+</ul></li>
+<li>Classification -- what kind of issue is this?
+<ul>
+<li>what part of the system are we looking at?
+<ul>
+<li>circulation?</li>
+<li>cataloging</li>
+<li>opac related?</li>
+</ul></li>
+<li>is this something that we've seen before?</li>
+<li>who can/should fix the problem?</li>
 </ul></li>
 <li>find a work around</li>
 <li>report bugs</li>
 </ul></li>
 </ul>
-<h2 id="three-legs-to-the-support-table">Three legs to the support table</h2>
+<h2 id="this-boils-down-to">This boils down to</h2>
 <ul>
 <li>Communication</li>
-<li>Getting to the root of the problem efficiently</li>
 <li>Replicating the issue</li>
+<li>Classifying the issue</li>
+<li>Getting to the root of the problem efficiently is the name of the game.</li>
 </ul>
 <h3 id="communication">Communication</h3>
 <h4 id="user-interface-issues">User Interface Issues</h4>
 <ul>
-<li>Unclear interfaces</li>
+<li>Unclear interfaces
+<ul>
+<li>Circulation rules</li>
+</ul></li>
 <li>Interfaces that are difficult to describe (example: acquisitions )</li>
 <li>Inconsistent interfaces (example: notices and slips)</li>
 </ul>
