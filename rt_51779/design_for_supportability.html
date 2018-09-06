@@ -1,8 +1,8 @@
 <h1 id="body-of-the-talk">Body of the talk</h1>
 <h2 id="intro-why-is-designing-for-support-important">Intro: Why is designing for support important?</h2>
-<h3 id="support-is-a-human-avtivity-and-is-limted-by-human-capacity">Support is a human avtivity, and is limted by human capacity</h3>
+<h3 id="support-is-a-human-activity-and-is-limited-by-human-capacity">Support is a human activity, and is limited by human capacity</h3>
 <ul>
-<li><p>Hi, My name is Barton Chittenden, I'm from Bywater Solutions. I am, among other things, one of the people that our partners reach when they call in to our support line. I'd like to talk about Koha from the perspective of someone who does technical support, and show how that fits in with the design of Koha.</p></li>
+<li><p>Hi, My name is Barton Chittenden, I'm from ByWater Solutions. I am, among other things, one of the people that our partners reach when they call in to our support line. I'd like to talk about Koha from the perspective of someone who does technical support, and show how that fits in with the design of Koha.</p></li>
 <li><p>So, before we go any further, I would like you to think about your last experience with a tech support phone call.</p></li>
 </ul>
 <p>By a show of hands, how many of you are</p>
@@ -14,49 +14,42 @@
 <p>Were you happy with your experience? Did the person on the other end of the line listen to you? Did you <em>really</em> believe them when they said they were sorry?</p>
 <p>The underlying problem is that when you call into an enormous phone center, you're going to be talking to someone who is taking 150 calls a day, and who has been turned into a robot dealing with the same problems over and over again.</p>
 <p>This isn't a good experience for anyone involved. One of the reasons for this is that...</p>
-<p>&quot;A computer lets you make more mistakes faster than any other invention with the possible exceptions of handguns and Tequila.&quot; -- Mitch Ratcliffe</p>
+<hr />
+<p>&quot;A computer lets you make more mistakes faster than any other invention with the possible exceptions of handguns and Tequila.&quot;</p>
+<p>-- Mitch Ratcliffe</p>
 <ul>
-<li><p>In a previous life, I did support for a VoIP product, a lot like Vonage. We had a feature that we rushed into production. This fix didn't get adequately tested at scale, and it ended up crashing the entire phone network every 20 seconds. It took operations 3 days to figure this out. Those were the three longest days of my life in tech support. It sucked my compassion dry.</p></li>
+<li><p>In a previous life, I did support for a VoIP product, a lot like Vonage. We had a feature that we rushed into production. This feature didn't get adequately tested at scale, and it ended up crashing the entire phone network every 20 seconds. It took operations 3 days to figure this out. The whole time, I was left saying &quot;I'm sorry you're having trouble with your VoIP. Yes, we are aware of this issue; I don't have a resolution at this time&quot;. Those were the three longest days of my life in tech support. It sucked my compassion dry.</p></li>
 <li><p>Koha isn't structured like this -- it's not deployed in a monolithic environment; it tends to be installed on a network of much smaller servers. However, one or more bad bugs in a major release <em>can</em> create a slow motion version of this, where support staff is not overwhelmed in a single day, but worn down over a period of time. The effects on our compassion, our ability to listen and communicate effectively are diminished, and that's bad for everyone.</p></li>
 <li><p>This talk is aimed at looking at some of the design decisions that would make Koha a little easier to support, either for a systems librarian at a site which has their own Koha instance, or for a support vendor.</p></li>
 </ul>
 <hr />
-<p>Life cycle of a support issue</p>
+<h3 id="elements-of-support">Elements of support</h3>
 <ul>
-<li>Something happens that the user perceives as wrong.</li>
-<li>User calls support, describes issue</li>
-<li>Support person works to
+<li>Communication with the partner
 <ul>
-<li>rephrase the issue in language that everyone can agree on</li>
-<li>narrow the description, find out what is or is not relevant</li>
-<li>replicate the issue
-<ul>
-<li>This helps reenforce communication -- if we're seeing the same responses from the system, we're largely in sync.</li>
+<li>At ByWater, we use the term 'reference interview'</li>
+<li>Expectation vs. reality</li>
 </ul></li>
-<li>Classification -- what kind of issue is this?
+<li>Classifying the issue
 <ul>
-<li>what part of the system are we looking at?
+<li>Assigning urgency and importance</li>
+<li>Allows us to find similar problems, perhaps the problem has already been solved.</li>
+<li>Finding the right person to solve the problem</li>
+</ul></li>
+<li>Replicating the issue
 <ul>
-<li>circulation?</li>
-<li>cataloging</li>
-<li>opac related?</li>
+<li>If we can see the problem and make it happen, we know that we have effective communication</li>
+<li>This also makes troubleshooting easier</li>
 </ul></li>
-<li>is this something that we've seen before?</li>
-<li>who can/should fix the problem?</li>
-</ul></li>
-<li>find a work around</li>
-<li>report bugs</li>
+<li>Trouble-shooting
+<ul>
+<li>Getting data from the system efficiently</li>
+<li>Finding the root-cause of an issue</li>
+<li>Is this a bug or a feature?</li>
 </ul></li>
 </ul>
-<h2 id="this-boils-down-to">This boils down to</h2>
-<ul>
-<li>Communication</li>
-<li>Replicating the issue</li>
-<li>Classifying the issue</li>
-<li>Getting to the root of the problem efficiently is the name of the game.</li>
-</ul>
-<h3 id="communication">Communication</h3>
-<h4 id="user-interface-issues">User Interface Issues</h4>
+<h3 id="challenges">Challenges</h3>
+<h3 id="communication-with-the-partner">Communication with the partner</h3>
 <ul>
 <li>Unclear interfaces
 <ul>
@@ -65,6 +58,73 @@
 <li>Interfaces that are difficult to describe (example: acquisitions )</li>
 <li>Inconsistent interfaces (example: notices and slips)</li>
 </ul>
+<h3 id="classifying-the-issue">Classifying the issue</h3>
+<ul>
+<li>Organization of the system</li>
+<li>Error messages hidden by plack</li>
+<li>Error messages not consistently recorded in bugzilla</li>
+<li>Organization of Bugzilla does not always match organization of Koha.</li>
+</ul>
+<h3 id="replicating-the-issue">Replicating the issue</h3>
+<ul>
+<li>Configuration can be spread across the system; non-obvious causation.</li>
+<li>Hard to extract a minimal amount of data to re-create problems.</li>
+<li>Interfaces that are difficult to describe</li>
+</ul>
+<h3 id="trouble-shooting">Trouble-shooting</h3>
+<ul>
+<li>Not always obvious what the system was designed to do.
+<ul>
+<li>Is this a bug or a feature?</li>
+</ul></li>
+<li>Gathering data can be challenging
+<ul>
+<li>We don't always have historical data</li>
+<li>Data can be linked in non-obvious ways</li>
+</ul></li>
+<li>Parts of the problem space poorly defined</li>
+<li>Getting data from the system efficiently</li>
+<li>Finding the root-cause of an issue</li>
+</ul>
+<h3 id="solutions">Solutions</h3>
+<h4 id="communication-with-the-partner-1">Communication with the partner</h4>
+<ul>
+<li>Unclear interfaces
+<ul>
+<li>Circulation rules</li>
+</ul></li>
+<li>Interfaces that are difficult to describe (example: acquisitions )</li>
+<li>Inconsistent interfaces (example: notices and slips)</li>
+</ul>
+<h4 id="classifying-the-issue-1">Classifying the issue</h4>
+<ul>
+<li>Organization of the system</li>
+<li>Error messages hidden by plack</li>
+<li>Error messages not consistently recorded in bugzilla</li>
+<li>Organization of Bugzilla does not always match organization of Koha.</li>
+</ul>
+<h4 id="replicating-the-issue-1">Replicating the issue</h4>
+<ul>
+<li>Configuration can be spread across the system; non-obvious causation.</li>
+<li>Hard to extract a minimal amount of data to re-create problems.</li>
+<li>Interfaces that are difficult to describe</li>
+</ul>
+<h4 id="trouble-shooting-1">Trouble-shooting</h4>
+<ul>
+<li>Not always obvious what the system was designed to do.
+<ul>
+<li>Is this a bug or a feature?</li>
+</ul></li>
+<li>Gathering data can be challenging
+<ul>
+<li>We don't always have historical data</li>
+<li>Data can be linked in non-obvious ways</li>
+</ul></li>
+<li>Parts of the problem space poorly defined</li>
+<li>Getting data from the system efficiently</li>
+<li>Finding the root-cause of an issue</li>
+</ul>
+<hr />
 <h3 id="getting-to-the-root-of-the-problem-efficiently">Getting to the root of the problem efficiently</h3>
 <ul>
 <li>Support interface</li>
@@ -77,7 +137,7 @@
 <li>Food processed data</li>
 <li>Grey areas, scary basements, loose specs</li>
 </ul>
-<h3 id="replicating-the-issue">Replicating the issue</h3>
+<h3 id="replicating-the-issue-2">Replicating the issue</h3>
 <ul>
 <li>All information needed to trouble-shoot an issue should be available in one place</li>
 </ul>
@@ -88,12 +148,12 @@
 <li>Performance</li>
 <li>Disk space</li>
 </ul>
-<h2 id="what-does-designing-for-supportability-give-us">What does designing for supportability give us?</h2>
+<h2 id="what-does-designing-for-support-ability-give-us">What does designing for support-ability give us?</h2>
 <ul>
 <li>The ability to identify patterns in support issues</li>
 <li>The ability to easily capture system configuration</li>
 <li>The ability to extract a sample of data to replicate issues and see common mis-configurations</li>
-<li>Discoverability</li>
+<li>Discover-ability</li>
 <li>Clear categories of issues</li>
 <li>Easy to describe</li>
 <li>Thin user interfaces - logic lies below the interface for testability purposes</li>
@@ -122,10 +182,37 @@
 <ul>
 <li>Once upon a time issue</li>
 <li>DIGEST notices</li>
-<li>Accountlines dateformat</li>
+<li>Accountlines date-format</li>
 <li>Report scheduler</li>
 </ul>
 <h2 id="other-thoughts">Other thoughts</h2>
 <ul>
 <li>Capacity and scaling issues are always hard</li>
+</ul>
+<p>Life cycle of a support issue</p>
+<ul>
+<li>Something happens that the user perceives as wrong.</li>
+<li>User calls support, describes issue</li>
+<li>Support person works to
+<ul>
+<li>rephrase the issue in language that everyone can agree on</li>
+<li>narrow the description, find out what is or is not relevant</li>
+<li>replicate the issue
+<ul>
+<li>This helps reenforce communication -- if we're seeing the same responses from the system, we're largely in sync.</li>
+</ul></li>
+<li>Classification -- what kind of issue is this?
+<ul>
+<li>what part of the system are we looking at?
+<ul>
+<li>circulation?</li>
+<li>cataloging</li>
+<li>OPAC related?</li>
+</ul></li>
+<li>is this something that we've seen before?</li>
+<li>who can/should fix the problem?</li>
+</ul></li>
+<li>find a work around</li>
+<li>report bugs</li>
+</ul></li>
 </ul>

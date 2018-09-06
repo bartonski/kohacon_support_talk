@@ -2,9 +2,9 @@
 
 ## Intro: Why is designing for support important?
 
-### Support is a human avtivity, and is limted by human capacity
+### Support is a human activity, and is limited by human capacity
 
-* Hi, My name is Barton Chittenden, I'm from Bywater Solutions. I am, among other things, one of the people that our
+* Hi, My name is Barton Chittenden, I'm from ByWater Solutions. I am, among other things, one of the people that our
 partners reach when they call in to our support line. I'd like to talk about Koha from the perspective of someone who
 does technical support, and show how that fits in with the design of Koha.
 
@@ -40,40 +40,90 @@ our compassion, our ability to listen and communicate effectively are diminished
 
 ---
 
-Life cycle of a support issue
+### Elements of support
 
-- Something happens that the user perceives as wrong.
-- User calls support, describes issue
-- Support person works to
-    * rephrase the issue in language that everyone can agree on
-    * narrow the description, find out what is or is not relevant
-    * replicate the issue
-        * This helps reenforce communication -- if we're seeing the same responses from the system, we're largely in sync.
-    * Classification -- what kind of issue is this?
-        * what part of the system are we looking at?
-            * circulation?
-            * cataloging
-            * opac related?
-        * is this something that we've seen before?
-        * who can/should fix the problem?
-    * find a work around
-    * report bugs
-
-## This boils down to
-
-- Communication
-- Replicating the issue
+- Communication with the partner
+    * At ByWater, we use the term 'reference interview'
+    * Expectation vs. reality
 - Classifying the issue
-- Getting to the root of the problem efficiently is the name of the game.
+    * Assigning urgency and importance
+    * Allows us to find similar problems, perhaps the problem has already been solved.
+    * Finding the right person to solve the problem
+- Replicating the issue
+    * If we can see the problem and make it happen, we know that we have effective communication
+    * This also makes troubleshooting easier
+- Trouble-shooting
+    * Getting data from the system efficiently
+    * Finding the root-cause of an issue
+    * Is this a bug or a feature?
 
-### Communication
+### Challenges
 
-#### User Interface Issues
+### Communication with the partner
 
 * Unclear interfaces
     * Circulation rules
 * Interfaces that are difficult to describe (example: acquisitions )
 * Inconsistent interfaces (example: notices and slips)
+
+### Classifying the issue
+
+* Organization of the system
+* Error messages hidden by plack
+* Error messages not consistently recorded in bugzilla
+* Organization of Bugzilla does not always match organization of Koha.
+
+### Replicating the issue
+
+* Configuration can be spread across the system; non-obvious causation.
+* Hard to extract a minimal amount of data to re-create problems.
+* Interfaces that are difficult to describe
+
+### Trouble-shooting
+
+* Not always obvious what the system was designed to do.
+    * Is this a bug or a feature?
+* Gathering data can be challenging
+    * We don't always have historical data
+    * Data can be linked in non-obvious ways
+* Parts of the problem space poorly defined
+* Getting data from the system efficiently
+* Finding the root-cause of an issue
+
+### Solutions
+
+#### Communication with the partner
+
+* Unclear interfaces
+    * Circulation rules
+* Interfaces that are difficult to describe (example: acquisitions )
+* Inconsistent interfaces (example: notices and slips)
+
+#### Classifying the issue
+
+* Organization of the system
+* Error messages hidden by plack
+* Error messages not consistently recorded in bugzilla
+* Organization of Bugzilla does not always match organization of Koha.
+
+#### Replicating the issue
+
+* Configuration can be spread across the system; non-obvious causation.
+* Hard to extract a minimal amount of data to re-create problems.
+* Interfaces that are difficult to describe
+
+#### Trouble-shooting
+
+* Not always obvious what the system was designed to do.
+    * Is this a bug or a feature?
+* Gathering data can be challenging
+    * We don't always have historical data
+    * Data can be linked in non-obvious ways
+* Parts of the problem space poorly defined
+* Getting data from the system efficiently
+* Finding the root-cause of an issue
+
+----
 
 ### Getting to the root of the problem efficiently
 
@@ -99,12 +149,12 @@ Life cycle of a support issue
 * Performance
 * Disk space
 
-## What does designing for supportability give us?
+## What does designing for support-ability give us?
 
 * The ability to identify patterns in support issues
 * The ability to easily capture system configuration
 * The ability to extract a sample of data to replicate issues and see common mis-configurations
-* Discoverability
+* Discover-ability
 * Clear categories of issues
 * Easy to describe
 * Thin user interfaces - logic lies below the interface for testability purposes
@@ -133,9 +183,28 @@ Life cycle of a support issue
 
 * Once upon a time issue
 * DIGEST notices
-* Accountlines dateformat
+* Accountlines date-format
 * Report scheduler
 
 ## Other thoughts
 
 * Capacity and scaling issues are always hard
+
+Life cycle of a support issue
+
+- Something happens that the user perceives as wrong.
+- User calls support, describes issue
+- Support person works to
+    * rephrase the issue in language that everyone can agree on
+    * narrow the description, find out what is or is not relevant
+    * replicate the issue
+        * This helps reenforce communication -- if we're seeing the same responses from the system, we're largely in sync.
+    * Classification -- what kind of issue is this?
+        * what part of the system are we looking at?
+            * circulation?
+            * cataloging
+            * OPAC related?
+        * is this something that we've seen before?
+        * who can/should fix the problem?
+    * find a work around
+    * report bugs
