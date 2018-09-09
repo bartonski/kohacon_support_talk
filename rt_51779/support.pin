@@ -1,8 +1,7 @@
 #!/usr/bin/env pinpoint
 
 [font=Sans 50px]
-[duration=5.000000]
--- [text-align=center] [duration=4.448699]
+-- [text-align=center] [duration=36.0]
 <big>Designing Koha for Supportability</big>
 
 <small>Barton Chittenden
@@ -27,19 +26,19 @@ ByWater Solutions</small>
 #
 # Raise your hands if the experience included
 
--- [duration=3.3]
+-- [duration=9.0]
 Pressing phone buttons in an IVR system?
 
 # ... Pressing phone buttons in an IVR system?
 #
 # Keep your hands up if you experienced 
--- [duration=3.3]
+-- [duration=5.0]
 A long wait on hold
 
 # ... A long wait on hold
 #
 # What about ...
--- [duration=3.3]
+-- [duration=12.0]
 # ... Hearing the phrase 
 # "I'm sorry you're having trouble with your ..."
 # ... cable mode, router, phone service...
@@ -48,18 +47,18 @@ Hearing the phrase
 "I'm sorry you're having trouble with your ..."
 
 # Ok, I'm going to give your arms a break ... put your hands down if
--- [duration=3.3]
+-- [duration=6.0]
 # ... You were happy with your tech support call
 You were happy with your tech support call
 
--- [duration=3.3]
+-- [duration=6.0]
 # ... You felt like the person on the other
 # end of the line was really listening
 
 You felt like the person on the other
 end of the line was really listening
 
--- [duration=3.3]
+-- [duration=37.0]
 # ... you *really* felt like the person
 # on the other end of the call was sorry.
 #
@@ -77,7 +76,7 @@ the other end of the call was sorry.
 #
 # One of the reasons for this is that...
 
--- [duration=3.3]
+-- [duration=28.0]
 # Computers can cause problems faster than people
 # can solve them.
 #
@@ -91,20 +90,20 @@ exceptions of handguns and Tequila."
 # We had a feature that we rushed into production, 
 #
 
--- [duration=3.3]
+-- [duration=7.0]
 # This feature didn't get adequately tested at scale,
 This feature didn't get adequately tested at scale,
 
 # and it ended up crashing the entire phone network
--- [VOiP.png] [duration=3.3]
+-- [images/VOiP.png] [duration=5.0]
 # every 20 seconds. 
 
--- [duration=3.3]
+-- [duration=5.0]
 #  It took operations 3 days to figure this out.
 
 It took operations 3 days to figure this out.
 
--- [duration=3.3]
+-- [duration=14.0]
 The whole time, I was left saying
 "I'm sorry you're having trouble with your VoIP."
 #  The whole time, I was left saying
@@ -112,26 +111,148 @@ The whole time, I was left saying
 #  Yes, we are aware of this issue;
 #  I don't have a resolution at this time".
 #
--- [duration=3.3]
+-- [duration=5.0]
 #  Those were the three longest days of my life in tech support.
 Those were the three longest days of my life in tech support.
 
--- [duration=3.3]
+-- [duration=5.0]
 #  It sucked my compassion dry.
 It sucked my compassion dry.
 
-# Koha isn't structured like this -- it's not deployed in a monolithic
-# environment; it tends to be installed on a network of much smaller
-# servers. However, one or more bad bugs in a major release can create
-# a slow motion version of this, where support staff is not overwhelmed
-# in a single day, but worn down over a period of time. The effects on
-# our compassion, our ability to listen and communicate effectively are
-# diminished, and that's bad for everyone.
+-- [images/stress_range.png] [duration=11.0] [bottom-left] [font=Sans 30px]
+If VOiP melt down is here
+
+# If the taking down an entire telecom
+# VoIP system every 20 seconds is on
+# the extreme Left,
+
+-- [images/stress_range.png] [duration=63.0] [bottom] [font=Sans 30px]
+
+Koha lives about here ^
+
+# Koha lives about here ^
 #
+# Then koha is about two thirds of the way to the right.
+#
+# Koha isn't structured like this -- it's not deployed in a monolithic
+# environment; it tends to be installed on a lotsf of much smaller
+# servers.
+#
+# However, one or more bad bugs in a major release can create
+# a slow motion version of a support melt-down, where support
+# staff is not overwhelmed in a single day, but worn down over
+# a period of time.
+#
+# The effects on # our compassion, our ability to listen and
+# communicate effectively are diminished.
+
+-- [images/stress_range.png] [duration=15.0] [bottom-right] [font=Sans 30px]
+
+We want to get here ^
+
 # This talk is aimed at looking at some of the design decisions that would
 # make Koha a little easier to support, either for a systems librarian at
-# a site which has their own Koha instance, or for a support vendor.
+# a site which has their own Koha instance, or for a support vendor. In
+# essence, our goal is to be able to support koha with kindness,
+# compassion and to be entirely present to those who we're helping.
 
--- [duration=3.3]
+-- [duration=5.0]
+The Elements of technical support
+
+* Communication with the partner
+# These are The Elements of technical support:
+#
+# * Communication with the partner
+#
+#   At ByWater, we use the term 'reference interview' 
+#   -- similar to the usage at a reference desk.
+#   We focus on broad, non-leading questions, trying
+#   to determine what the partner wants and expects,
+#   and how that differs from their experience.
+
+-- [duration=5.0]
+The Elements of technical support
+
+* Communication with the partner
+* Classifying the issue
+# Classifying the issue:
+#
+# We try to 
+# * ascess the urgency and importance of the issue
+# * categorize the issue to find similar problems
+#   -- perhaps the problem has already been solved.
+# * figure out if this is a bug or a feature
+# * Find the right person to solve the problem
+
+-- [duration=5.0]
+The Elements of technical support
+
+* Communication with the partner
+* Classifying the issue
+* Replicating the issue
+# Replicating the issue
+#
+# If we can see the problem and make it happen,
+# we know that we have effective communication
+# This also makes troubleshooting easier
+
+-- [duration=5.0]
+The Elements of technical support
+
+* Communication with the partner
+* Classifying the issue
+* Replicating the issue
+* Trouble-shooting
+# Trouble-shooting
+#
+# We want to get to the root cause of the issue,
+# and find a solution, or at least a work-around
+# in the case of a bug.
+
+
+-- [duration=5.0]
+What are the challenges?
+
+# Let's look at some of the challenges that make
+# each of these elements difficult.
+#
+# Before I go any farther, I want to say that
+# I'm going to be talking about specific parts
+# of Koha... we have a lot of developers in
+# the room. I have nothing but love and respect
+# for all of you -- rather, I want to make
+# Koha better, and I need a few specifics to
+# show what causes a lot of work for support folks.
+
+-- [duration=5.0]
+Challenges in communication
+
+* Confusing interfaces
+
+# An example of this would be the rules for lost statuses.
+# The behavior of lost items depends on
+#
+# * System preferences
+# * Authorized values
+# * Arguments in the cron file
+# * Lost status of the item itself
+# * Where the lost status is set
+#     * The last of these was a bug, people started depending
+#       on its behavior, and now we have a system preference
+#       that restores the buggy behavior, because it's a known
+#       way to bypass refunding a lost item fee.
+#
+# The rules that define when a lost item fee is charged are
+# not *explicitly* defined anywhere.
+
+-- [duration=5.0]
+Challenges in communication
+
+* Confusing interfaces
+* Interfaces that are difficult to describe
+
+# The pages under Acquisitions are visually very similar.
+# It's not clear how these pages relate to each other 
+
 
 

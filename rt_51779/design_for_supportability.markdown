@@ -208,3 +208,6 @@ Life cycle of a support issue
         * who can/should fix the problem?
     * find a work around
     * report bugs
+
+ExcludeHolidaysFromMaxPickUpDelay
+question being does 'Allow Closed days to be taken into account in reserves max pickup delay.' mean 'closed days to be counted' or  'the calendar to be used to skip closed days'
