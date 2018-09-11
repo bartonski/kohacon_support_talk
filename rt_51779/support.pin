@@ -34,7 +34,7 @@ The tech support perspective
 # and everything I showed them worked
 # really well... and I realized that
 # this wasn't the Koha that I saw every
-# day. ... so I want to appologize in
+# day. ... so I want to apologize in
 # advance; this talk isn't "Koha, the
 # good parts version.". I only get to
 # read the parts of the book where Miracle
@@ -48,7 +48,7 @@ The tech support perspective
 # doing tech support in anything other
 # than English -- I suspect that there
 # may be some communication challenges
-# in other lanugages.
+# in other languages.
 #
 # So, before we go any further,
 # I would like you to think about your
@@ -322,13 +322,13 @@ Communication
 * Interfaces that are difficult to describe
 * Inconsistent interfaces
 
-# Koha devides circulation notices into "advanced notices"
+# Koha divides circulation notices into "advanced notices"
 # and "overdue notices".
 #
 # Overdue notices have one syntax for showing item data,
 # and advance notices have another.
 #
-# Using the syntax for overdue notices ratther than
+# Using the syntax for overdue notices rather than
 # advance notices is a *very* common error.
 
 -- [duration=0.08]
@@ -537,7 +537,7 @@ Classification
 #
 # Now I should mention that
 # this teacher was Native
-# American, from the Chocktaw
+# American, from the Choctaw
 # tribe.
 #
 # she looked up at us
@@ -661,7 +661,7 @@ Conclusion
 # every problem that comes our
 # way.
 #
-# Designing for supportability
+# Designing for support-ability
 # helps librarians communicate
 # with their tech support people,
 # helps support folks to classify
