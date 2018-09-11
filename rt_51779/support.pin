@@ -1,20 +1,17 @@
 #!/usr/bin/env pinpoint
 
-[font=Sans 50px]
+[font=Sans 60px]
+[duration=45.0]
 -- [text-align=center] [duration=36.0]
-<big>Designing Koha for Supportability</big>
+<big>Designing Koha for Support-ability</big>
 
-<small>Barton Chittenden
+Barton Chittenden
 
-ByWater Solutions</small>
+ByWater Solutions
 
 # Hi, My name is Barton Chittenden,
 #
-# I'm from Bywater Solutions.
-# I am, among other things,
-# one of the people that
-# our partners reach when
-# they call in to our support line.
+# I do technical support for ByWater Solutions.
 #
 # I'd like to talk about Koha from the
 # perspective of someone who does technical support,
@@ -27,7 +24,8 @@ ByWater Solutions</small>
 # Raise your hands if the experience included
 
 -- [duration=9.0]
-Pressing phone buttons in an IVR system?
+Pressing phone buttons
+in an IVR system?
 
 # ... Pressing phone buttons in an IVR system?
 #
@@ -44,26 +42,31 @@ A long wait on hold
 # ... cable mode, router, phone service...
 #
 Hearing the phrase
-"I'm sorry you're having trouble with your ..."
+"I'm sorry you're having
+trouble with your ..."
 
 # Ok, I'm going to give your arms a break ... put your hands down if
 -- [duration=6.0]
 # ... You were happy with your tech support call
-You were happy with your tech support call
+You were happy with your
+tech support call
 
 -- [duration=6.0]
 # ... You felt like the person on the other
 # end of the line was really listening
 
-You felt like the person on the other
-end of the line was really listening
+You felt like the person on
+the other end of the line was
+really listening
 
 -- [duration=37.0]
 # ... you *really* felt like the person
 # on the other end of the call was sorry.
 #
-You <i>really</i> felt like the person on
-the other end of the call was sorry.
+# Ok, go ahead and put your hands down.
+You <i>really</i> felt like
+the person on the other end
+of the call was sorry.
 
 # 
 # The underlying problem is that when you call
@@ -80,9 +83,11 @@ the other end of the call was sorry.
 # Computers can cause problems faster than people
 # can solve them.
 #
-"A computer lets you make more mistakes faster
-than any other invention with the possible
-exceptions of handguns and Tequila."
+"A computer lets you make
+more mistakes faster than
+any other invention with
+the possible exceptions of
+handguns and Tequila."
 
  -- Mitch Ratcliffe
 
@@ -92,7 +97,8 @@ exceptions of handguns and Tequila."
 
 -- [duration=7.0]
 # This feature didn't get adequately tested at scale,
-This feature didn't get adequately tested at scale,
+This feature didn't get
+adequately tested at scale,
 
 # and it ended up crashing the entire phone network
 -- [images/VOiP.png] [duration=5.0]
@@ -101,11 +107,14 @@ This feature didn't get adequately tested at scale,
 -- [duration=5.0]
 #  It took operations 3 days to figure this out.
 
-It took operations 3 days to figure this out.
+It took operations 3 days to
+figure this out.
 
 -- [duration=14.0]
-The whole time, I was left saying
-"I'm sorry you're having trouble with your VoIP."
+The whole time, I was left
+saying "I'm sorry you're
+having trouble with your
+VoIP."
 #  The whole time, I was left saying
 #  "I'm sorry you're having trouble with your VoIP.
 #  Yes, we are aware of this issue;
@@ -113,7 +122,9 @@ The whole time, I was left saying
 #
 -- [duration=5.0]
 #  Those were the three longest days of my life in tech support.
-Those were the three longest days of my life in tech support.
+Those were the three longest
+days of my life in tech
+support.
 
 -- [duration=5.0]
 #  It sucked my compassion dry.
@@ -134,16 +145,22 @@ Koha lives about here ^
 #
 # Then koha is about two thirds of the way to the right.
 #
-# Koha isn't structured like this -- it's not deployed in a monolithic
-# environment; it tends to be installed on a lotsf of much smaller
-# servers.
+# Because Koha is a mature open source project with an
+# excellent QA team, and because it's deployed it's deployed
+# on lots of of small servers rather than one large server,
+# it's unlikely that we will get hit with a catastrophic
+# affecting everyone at once.
 #
 # However, one or more bad bugs in a major release can create
 # a slow motion version of a support melt-down, where support
 # staff is not overwhelmed in a single day, but worn down over
 # a period of time.
+# 
+# Tech support is a human endeavor, and it only works when
+# the people doing it have the time, energy and patience
+# to pay attention.
 #
-# The effects on # our compassion, our ability to listen and
+# The effects on our compassion, our ability to listen and
 # communicate effectively are diminished.
 
 -- [images/stress_range.png] [duration=15.0] [bottom-right] [font=Sans 30px]
@@ -157,12 +174,13 @@ We want to get here ^
 # compassion and to be entirely present to those who we're helping.
 
 -- [duration=5.0]
-The Elements of technical support
+The Elements of
+technical support
 
-* Communication with the partner
-# These are The Elements of technical support:
+* Communication
+# What do support people do?
 #
-# * Communication with the partner
+# * Communication
 #
 #   At ByWater, we use the term 'reference interview' 
 #   -- similar to the usage at a reference desk.
@@ -171,37 +189,41 @@ The Elements of technical support
 #   and how that differs from their experience.
 
 -- [duration=5.0]
-The Elements of technical support
+The Elements of
+technical support
 
-* Communication with the partner
-* Classifying the issue
-# Classifying the issue:
+* Communication
+* Classifying issues
+# Classifying issues:
 #
 # We try to 
-# * ascess the urgency and importance of the issue
-# * categorize the issue to find similar problems
+# * Assess the urgency and importance of the issue
+# * Categorize the issue to find similar problems
 #   -- perhaps the problem has already been solved.
-# * figure out if this is a bug or a feature
+# * Figure out if this is a bug or a feature
+# * Figure out what additional questions to ask
 # * Find the right person to solve the problem
 
 -- [duration=5.0]
-The Elements of technical support
+The Elements of
+technical support
 
-* Communication with the partner
-* Classifying the issue
-* Replicating the issue
-# Replicating the issue
+* Communication
+* Classifying issues
+* Replicating issues
+# Replicating issues
 #
 # If we can see the problem and make it happen,
 # we know that we have effective communication
 # This also makes troubleshooting easier
 
 -- [duration=5.0]
-The Elements of technical support
+The Elements of
+technical support
 
-* Communication with the partner
-* Classifying the issue
-* Replicating the issue
+* Communication
+* Classifying issues
+* Replicating issues
 * Trouble-shooting
 # Trouble-shooting
 #
@@ -215,17 +237,9 @@ What are the challenges?
 
 # Let's look at some of the challenges that make
 # each of these elements difficult.
-#
-# Before I go any farther, I want to say that
-# I'm going to be talking about specific parts
-# of Koha... we have a lot of developers in
-# the room. I have nothing but love and respect
-# for all of you -- rather, I want to make
-# Koha better, and I need a few specifics to
-# show what causes a lot of work for support folks.
 
 -- [duration=5.0]
-Challenges in communication
+Communication
 
 * Confusing interfaces
 
@@ -246,7 +260,7 @@ Challenges in communication
 # not *explicitly* defined anywhere.
 
 -- [duration=5.0]
-Challenges in communication
+Communication
 
 * Confusing interfaces
 * Interfaces that are difficult to describe
@@ -254,5 +268,188 @@ Challenges in communication
 # The pages under Acquisitions are visually very similar.
 # It's not clear how these pages relate to each other 
 
+-- [duration=5.0]
+Classifying problems
 
+# It's not always easy to see from the initial description
+# of a problems.
+#
+# Good error messages make categorization easier, but these
+# are hidden in plack.
+#
+# Bread crumbs, Perl file names, and labels should all agree
+#
+# Perl file names and error messages are not indexed or
+# search-able in bugzilla
+#
+# There can be a dis-connect between the structure of Koha
+# and the structure of Bugzilla
+#
+# Hard to figure out of a problem is a bug or misunderstanding
+# of a feature
 
+-- [duration=5.0]
+Replicating issues
+
+# Not obvious what configuration triggers a problem.
+#
+# This makes is it easy to end up with a problem to re-create
+# because of a hidden configuration -- or worse, that
+# *others* can't re-create.
+#
+# Don't always have initial state -- for instance holds.
+# Capturing a hold, or running the holds queue builder
+# change the state of the data. By the time that the
+# problem presents itself, we're in the dark.
+#
+# Intermittent issues (this is actually special case of
+# the above)
+#
+# Hard to know what the smallest amount of data is needed
+# to replicate an issue.
+
+-- [duration=5.0]
+Trouble-shooting
+
+# Some parts of the Koha code base, for example
+# the holds queue builder or the internals of
+# Search.pm are what Kyle calls 'Scary Basements'.
+# 
+# The internals are not well documented or understood
+# by the community at large. Sometimes these were
+# written by people who are no longer in the community,
+# In other cases the complexity has grown over time
+# to the point where no one knows exactly
+# what the functionality is.
+#
+# Sometimes we run into intermittent problems, and
+# we don't have a large enough sample of data to
+# spot a trend -- we essentially have to say "that
+# this is a glitch", and move on.
+# 
+# Some software errors are caused by data that
+# violates Koha's data integrity -- this is
+# increasingly common as we move toward Koha
+# objects -- places where the previous code
+# would have silently ignored data problems
+# now cause fatal errors.
+#
+# When trouble shooting gets down to the level
+# where people in support have to read source
+# code, this becomes very slow -- when a developer
+# takes three hours to read a piece of code that
+# they're not familiar with, that's probably not
+# critical. When someone in a tech support
+# position does the same, it's because
+# someone is waiting to know why Koha worked
+# this way or that, and three hours may
+# be critical.
+
+-- [duration=5.0]
+What can we do to make this
+easier?
+
+-- [duration=5.0]
+Communication
+
+# The user interface should be
+# explicit about the effects of
+# users actions.
+# 
+# The configuration of like
+# things should be grouped
+# together, to avoid spooky
+# action at a distance
+# 
+# User interfaces should use
+# a controlled vocabulary that
+# is consistent from database
+# table and field names, bread
+# crumb names, link text and
+# Perl controller names.  If we
+# have a controlled vocabulary,
+# it becomes easier for support
+# to ask for clarification
+# using that vocabulary.
+# 
+# Features should be clearly
+# and strictly documented so
+# that it's clear not only what
+# the software does, but what
+# it does *not* do.
+
+-- [duration=5.0]
+Classification
+
+# Wherever possible, the
+# classification of bugs and
+# errors should follow what the
+# user sees.
+
+# I had a European history
+# teacher in high school. We
+# were talking about the
+# succession of kings,
+# and the importance of male
+# heirs... she looked up at us
+# with a twinkle in her eye,
+# and said "Among the Choctaw,
+# we don't trace lineage
+# through the father. You don't
+# always know who the father
+# is. But you *always* know who
+# the mother is.
+
+# Error messages should be sent
+# to the screen. The user needs
+# to see more than "Software error"
+
+-- [duration=5.0]
+Replication
+
+# Make configuration explicit
+# 
+# Make it easy to pull together data and
+# configuration which causes the problem
+# 
+# Make it easy (or at least possible)
+# to find the initial state of of data
+# before a problem occurs.
+# 
+# Have the system log the steps that lead
+# up to a problem -- essentially emitting
+# a problem description or test plan.
+
+-- [duration=5.0]
+Improving trouble shooting
+
+# Eliminate scary basements -- Document
+# code, re-factor code for clarity. Shout
+# out to Jonathan, who has moved so much
+# code into the Koha namespace.
+# 
+# I can read the source code, which tells
+# me *what* is happening, but reading the
+# code will not tell me *why*. Document
+# this.
+# 
+# Whenever code makes assumptions about
+# data, write a query that we can use as
+# a data checker.
+# 
+# Intermittent issues can be found
+# by logging. We need to start using
+# Koha::Logger.
+
+-- [duration=5.0]
+Conclusion
+
+# Technical support lives with
+# the constant threat of computers
+# making more mistakes than they
+# can handle, on one hand, and
+# being kind, compassionate individuals who listen and fully process and understand what each partner request, problem or issue.
+# We're part of the community.
+
+-- [duration=5.0]
+Questions?
